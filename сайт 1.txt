@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сладкоежка - Магазин сладостей</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Сладкоежка</h1>
+            </div>
+            <nav>
+                <a href="index.html" class="active">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="about.html">О нас</a>
+                <a href="contact.html">Контакты</a>
+                <a href="cart.html">Корзина</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Рай для сладкоежек!</h2>
+                <p>У нас вы найдете самые вкусные и свежие сладости.</p>
+                <a href="catalog.html" class="btn">Смотреть каталог</a>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <h2>Рекомендуемые товары</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="images/milk-chocolate.jpg" alt="Молочный шоколад">
+                        <h3>Молочный шоколад</h3>
+                        <p>Нежный молочный шоколад с орехами.</p>
+                        <span class="price">150 руб.</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/chocolate-cake.jpg" alt="Шоколадный торт">
+                        <h3>Шоколадный торт</h3>
+                        <p>Вкуснейший шоколадный торт на заказ.</p>
+                        <span class="price">1200 руб.</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/chocolate-cookies.jpg" alt="Печенье с шоколадом">
+                        <h3>Печенье с шоколадом</h3>
+                        <p>Свежее печенье с кусочками шоколада.</p>
+                        <span class="price">80 руб.</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Сладкоежка. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - Сладкоежка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Сладкоежка</h1>
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="catalog.html" class="active">Каталог</a>
+                <a href="about.html">О нас</a>
+                <a href="contact.html">Контакты</a>
+                <a href="cart.html">Корзина</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="catalog">
+            <div class="container">
+                <h2>Наш каталог сладостей</h2>
+                <div class="filter-section">
+                    <select id="category-filter">
+                        <option value="all">Все категории</option>
+                        <option value="chocolate">Шоколад</option>
+                        <option value="cakes">Торты</option>
+                        <option value="cookies">Печенье</option>
+<option value="candies">Конфеты</option>
+                    </select>
+                    <input type="text" id="search" placeholder="Поиск по названию...">
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card" data-category="chocolate">
+                        <img src="images/milk-chocolate.jpg" alt="Молочный шоколад">
+                        <h3>Молочный шоколад</h3>
+                        <p>Нежный молочный шоколад с орехами.</p>
+                        <span class="price">150 руб.</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                    <div class="product-card" data-category="chocolate">
+                        <img src="images/dark-chocolate.jpg" alt="Горький шоколад">
+                        <h3>Горький шоколад</h3>
+                        <p>Настоящий горький шоколад 85% какао.</p>
+                        <span class="price">180 руб.</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                    <div class="product-card" data-category="cakes">
+                        <img src="images/chocolate-cake.jpg" alt="Шоколадный торт">
+                        <h3>Шоколадный торт</h3>
+                        <p>Вкуснейший шоколадный торт на заказ.</p>
+                        <span class="price">1200 руб.</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                    <div class="product-card" data-category="cakes">
+                        <img src="images/cheesecake.jpg" alt="Чизкейк">
+                        <h3>Чизкейк</h3>
+                        <p>Нежный чизкейк с ягодным топпингом.</p>
+                        <span class="price">1100 руб.</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                    <div class="product-card" data-category="cookies">
+                        <img src="images/chocolate-cookies.jpg" alt="Печенье с шоколадом">
+                        <h3>Печенье с шоколадом</h3>
+                        <p>Свежее печенье с кусочками шоколада.</p>
+                        <span class="price">80 руб.</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                    <div class="product-card" data-category="cookies">
+                        <img src="images/oatmeal-cookies.jpg" alt="Овсяное печенье">
+                        <h3>Овсяное печенье</h3>
+                        <p>Домашнее овсяное печенье с изюмом.</p>
+                        <span class="price">70 руб.</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                    <div class="product-card" data-category="candies">
+                        <img src="images/truffles.jpg" alt="Шоколадные трюфели">
+                        <h3>Шоколадные трюфели</h3>
+                        <p>Набор из 6 шоколадных трюфелей.</p>
+                        <span class="price">350 руб.</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                    <div class="product-card" data-category="candies">
+                        <img src="images/lollipops.jpg" alt="Фруктовые леденцы">
+                        <h3>Фруктовые леденцы</h3>
+                        <p>Набор разноцветных фруктовых леденцов.</p>
+                        <span class="price">120 руб.</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Сладкоежка. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - Сладкоежка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Сладкоежка</h1>
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="about.html" class="active">О нас</a>
+                <a href="contact.html">Контакты</a>
+                <a href="cart.html">Корзина</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <h2>О нашей кондитерской</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Добро пожаловать в "Сладкоежку" - рай для настоящих ценителей сладкого!</p>
+                        <p>Наша история началась в 2010 году с маленькой домашней кондитерской. С тех пор мы выросли в сеть магазинов по всему городу, но сохранили домашний подход к качеству и любовь к своему делу.</p>
+                        <p>Мы используем только натуральные ингредиенты высшего качества: бельгийский шоколад, французское масло, свежие яйца от фермерских хозяйств. В наших продуктах вы не найдете искусственных консервантов и ароматизаторов.</p>
+                        <h3>Наши преимущества:</h3>
+                        <ul>
+                            <li>Свежие продукты ежедневного приготовления</li>
+                            <li>Индивидуальный подход к каждому клиенту</li>
+                            <li>Возможность заказа тортов по вашим эскизам</li>
+                            <li>Доставка в день заказа</li>
+                            <li>Гибкая система скидок для постоянных клиентов</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/bakery-interior.jpg" alt="Наша кондитерская">
+                    </div>
+                </div>
+                
+                <div class="team-section">
+                    <h3>Наша команда</h3>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <img src="images/chef1.jpg" alt="Анна Петрова">
+                            <h4>Анна Петрова</h4>
+                            <p>Главный кондитер</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="images/chef2.jpg" alt="Иван Сидоров">
+                            <h4>Иван Сидоров</h4>
+                            <p>Шоколатье</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="images/manager.jpg" alt="Елена Козлова">
+                            <h4>Елена Козлова</h4>
+                            <p>Менеджер</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Сладкоежка. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Сладкоежка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Сладкоежка</h1>
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="about.html">О нас</a>
+                <a href="contact.html" class="active">Контакты</a>
+                <a href="cart.html">Корзина</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+<section class="contacts">
+            <div class="container">
+                <h2>Наши контакты</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Адрес</h3>
+                        <p>г. Москва, ул. Сладкая, д. 15</p>
+                        <p>Вход со стороны бульвара Кондитерский</p>
+                        
+                        <h3>Часы работы</h3>
+                        <p>Пн-Пт: 9:00 - 21:00</p>
+                        <p>Сб-Вс: 10:00 - 20:00</p>
+                        
+                        <h3>Телефоны</h3>
+                        <p>+7 (495) 123-45-67</p>
+                        <p>+7 (925) 765-43-21 (доставка)</p>
+                        
+                        <h3>Email</h3>
+                        <p>info@sladkoezhka.ru</p>
+                        
+                        <div class="social-links">
+                            <h3>Мы в соцсетях</h3>
+                            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                            <a href="#"><img src="images/vk.png" alt="VK"></a>
+                            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Напишите нам</h3>
+                        <form id="feedback-form">
+                            <div class="form-group">
+                                <label for="name">Ваше имя:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон:</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Сообщение:</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="map-section">
+                    <h3>Как нас найти</h3>
+                    <div class="map">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1234567890abcdef&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Сладкоежка. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Сладкоежка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Сладкоежка</h1>
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="about.html">О нас</a>
+                <a href="contact.html">Контакты</a>
+                <a href="cart.html" class="active">Корзина</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="cart">
+            <div class="container">
+                <h2>Ваша корзина</h2>
+<div class="cart-content">
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <img src="images/milk-chocolate.jpg" alt="Молочный шоколад">
+                            <div class="item-info">
+                                <h3>Молочный шоколад</h3>
+                                <p>150 руб. за шт.</p>
+                                <div class="quantity-control">
+                                    <button class="decrease">-</button>
+                                    <span class="quantity">2</span>
+                                    <button class="increase">+</button>
+                                </div>
+                            </div>
+                            <div class="item-price">
+                                <span>300 руб.</span>
+                                <button class="remove-item">×</button>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-item">
+                            <img src="images/chocolate-cookies.jpg" alt="Печенье с шоколадом">
+                            <div class="item-info">
+                                <h3>Печенье с шоколадом</h3>
+                                <p>80 руб. за шт.</p>
+                                <div class="quantity-control">
+                                    <button class="decrease">-</button>
+                                    <span class="quantity">3</span>
+                                    <button class="increase">+</button>
+                                </div>
+                            </div>
+                            <div class="item-price">
+                                <span>240 руб.</span>
+                                <button class="remove-item">×</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-summary">
+                        <h3>Итого</h3>
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Товары (2)</span>
+                                <span>540 руб.</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Доставка</span>
+                                <span>200 руб.</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>К оплате</span>
+                                <span>740 руб.</span>
+                            </div>
+                        </div>
+                        
+                        <form class="delivery-form">
+                            <h3>Доставка</h3>
+                            <div class="form-group">
+                                <label for="delivery-address">Адрес доставки:</label>
+                                <input type="text" id="delivery-address" name="delivery-address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="delivery-date">Дата доставки:</label>
+                                <input type="date" id="delivery-date" name="delivery-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="delivery-time">Время доставки:</label>
+                                <select id="delivery-time" name="delivery-time" required>
+                                    <option value="10-14">10:00 - 14:00</option>
+                                    <option value="14-18">14:00 - 18:00</option>
+                                    <option value="18-22">18:00 - 22:00</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="payment-method">Способ оплаты:</label>
+<select id="payment-method" name="payment-method" required>
+                                    <option value="cash">Наличными курьеру</option>
+                                    <option value="card">Картой онлайн</option>
+                                </select>
+                            </div>
+                        </form>
+                        
+                        <button class="checkout-btn">Оформить заказ</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Сладкоежка. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f3f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #e91e63;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #c2185b;
+}
+
+/* Шапка */
+header {
+    background-color: #d8b1bf;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+}
+
+nav a {
+    margin-left: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: rgba(233, 30, 99, 0.2);
+}
+
+/* Главный контент */
+main {
+    padding: 30px 0;
+}
+
+h2 {
+    color: #e91e63;
+    margin-bottom: 20px;
+}
+
+/* Герой-секция */
+.hero {
+    background-color: #f2e6ff;
+    padding: 50px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    margin-top: 0;
+}
+
+/* Сетка товаров */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 15px 0 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: #e91e63;
+    display: block;
+    margin: 10px 0;
+}
+
+.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #3e8e41;
+}
+
+/* О нас */
+.about-content {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Контакты */
+.contact-content {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+margin-right: 10px;
+}
+
+.social-links img {
+    width: 32px;
+    height: 32px;
+}
+
+.map {
+    margin-top: 20px;
+}
+
+/* Корзина */
+.cart-content {
+    display: flex;
+    gap: 30px;
+}
+
+.cart-items {
+    flex: 2;
+}
+
+.cart-summary {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+    display: flex;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quantity-control button {
+    background-color: #f0f0f0;
+    border: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.quantity-control span {
+    margin: 0 10px;
+}
+
+.item-price {
+    text-align: right;
+    min-width: 100px;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #e91e63;
+    margin-left: 10px;
+}
+
+.summary-details {
+    margin: 20px 0;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-row.total {
+    font-weight: bold;
+    font-size: 18px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.delivery-form {
+    margin-top: 20px;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #c2185b;
+}
+
+/* Подвал */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Фильтры в каталоге */
+.filter-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-section select,
+.filter-section input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.filter-section input {
+    flex: 1;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    
+    nav {
+        margin-top: 15px;
+    }
+    
+    .about-content,
+    .contact-content,
+    .cart-content {
+        flex-direction: column;
+    }
+    
+    .product-card {
+        width: 100%;
+    }
+}
+document.addEventListener('DOMContentLoaded', function() {
+    // Добавление товара в корзину
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            alert('Товар добавлен в корзину');
+        });
+    });
+    
+    // Фильтрация товаров в каталоге
+    if (document.getElementById('category-filter')) {
+        const categoryFilter = document.getElementById('category-filter');
+        const searchInput = document.getElementById('search');
+        const productCards = document.querySelectorAll('.product-card');
+        
+        function filterProducts() {
+            const selectedCategory = categoryFilter.value;
+            const searchText = searchInput.value.toLowerCase();
+            
+            productCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const matchesCategory = selectedCategory === 'all' || category === selectedCategory;
+                const matchesSearch = title.includes(searchText);
+                
+                if (matchesCategory && matchesSearch) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+        
+        categoryFilter.addEventListener('change', filterProducts);
+        searchInput.
+addEventListener('input', filterProducts);
+    }
+    
+    // Управление количеством товаров в корзине
+    const decreaseButtons = document.querySelectorAll('.decrease');
+    const increaseButtons = document.querySelectorAll('.increase');
+    const removeButtons = document.querySelectorAll('.remove-item');
+    
+    decreaseButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const quantityElement = this.nextElementSibling;
+            let quantity = parseInt(quantityElement.textContent);
+            if (quantity > 1) {
+                quantity--;
+                quantityElement.textContent = quantity;
+                updateCartItemPrice(this.closest('.cart-item'));
+            }
+        });
+    });
+    
+    increaseButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const quantityElement = this.previousElementSibling;
+            let quantity = parseInt(quantityElement.textContent);
+            quantity++;
+            quantityElement.textContent = quantity;
+            updateCartItemPrice(this.closest('.cart-item'));
+        });
+    });
+    
+    removeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            this.closest('.cart-item').remove();
+            updateCartSummary();
+        });
+    });
+    
+    function updateCartItemPrice(item) {
+        const pricePerUnit = parseFloat(item.querySelector('.item-info p').textContent.match(/\d+/)[0]);
+        const quantity = parseInt(item.querySelector('.quantity').textContent);
+        const totalPrice = pricePerUnit * quantity;
+        item.querySelector('.item-price span').textContent = totalPrice + ' руб.';
+        updateCartSummary();
+    }
+    
+    function updateCartSummary() {
+        // Здесь должна быть логика обновления итоговой суммы
+        // В реальном проекте это будет более сложная функция
+    }
+    
+    // Обработка формы обратной связи
+    if (document.getElementById('feedback-form')) {
+        document.getElementById('feedback-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
+            this.reset();
+        });
+    }
+    
+    // Обработка оформления заказа
+    if (document.querySelector('.checkout-btn')) {
+        document.querySelector('.checkout-btn').addEventListener('click', function() {
+            alert('Заказ успешно оформлен! Спасибо за покупку.');
+        });
+    }
+});
